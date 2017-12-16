@@ -9,7 +9,10 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # previous theme avit
-ZSH_THEME="murilasso"
+#ZSH_THEME="murilasso"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE='awesome-patched'
+
 DEFAULT_USER=`whoami`
 
 # Example aliases
@@ -53,7 +56,7 @@ DEFAULT_USER=`whoami`
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bower brew autojump git-extras node npm osx sudo web-search tmux)
+plugins=(git zsh-autosuggestions bower brew autojump git-extras node npm osx sudo web-search tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,15 +70,13 @@ export LANG=en_US.UTF-8
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
 export EDITOR='vim'
 
-source ~/.nvm/nvm.sh
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
-alias vim=/usr/local/bin/vim
+ZSH_TMUX_AUTOSTART='true'
+
+#alias vim=/usr/local/bin/vim
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
