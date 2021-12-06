@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.config/nvim: nvim
+    ~/.config/kitty: kitty
+    ~/.gvimrc: gvimrc
+    ~/.zshrc: zshrc
+    ~/.tmux.conf: tmux.conf 
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [~/.tmux/plugins/tpm/scripts/install_plugins.sh > /dev/null 2>&1, Installing tmux plugins]
+    - ["vim +PlugUpdate +PlugClean~ +qa", Installing and updating plugins]
+
