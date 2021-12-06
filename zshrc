@@ -78,6 +78,8 @@ export EDITOR='nvim'
 export NVIM_LISTEN_ADDRESS='/tmp/nvimsocket'
 export FZF_DEFAULT_COMMAND='ag -u -g ""'
 
+export GPG_TTY=$(tty)
+
 unsetopt sharehistory
 # }}}
 
