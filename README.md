@@ -25,4 +25,4 @@ Bat: https://github.com/sharkdp/bat
 
 Run all with:
 * `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-* `brew install antibody ripgrep bat && $(brew --prefix)/opt/fzf/install`
+* `brew install antibody ripgrep bat fzf && $(brew --prefix)/opt/fzf/install`
