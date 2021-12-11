@@ -21,3 +21,8 @@ RipGrep: https://github.com/BurntSushi/ripgrep#installation
 
 Bat: https://github.com/sharkdp/bat
 `brew install bat`
+
+
+Run all with:
+* `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+* `brew install antibody ripgrep bat && $(brew --prefix)/opt/fzf/install`
