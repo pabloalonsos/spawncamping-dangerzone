@@ -14,6 +14,7 @@ let g:coc_global_extensions = [
       \ 'coc-snippets',
       \ 'coc-sql',
       \ 'coc-svg',
+      \ 'https://github.com/rodrigore/coc-tailwind-intellisense',
       \ 'coc-tsserver'
       \ ]
 

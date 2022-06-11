@@ -25,7 +25,7 @@ set termguicolors
 set undofile
 
 " Checks for spelling
-set spell
+"set spell
 
 " Sets the vim title to the file name
 set title
@@ -94,7 +94,7 @@ nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
 " Allow gf to open non-existent files
-map gf :edit <cfile><cr>
+"map gf :edit <cfile><cr>
 
 " Reselect visual selection after indenting
 vnoremap < <gv
@@ -245,6 +245,7 @@ source ~/.config/nvim/plugins/visual-star-search.vim
 source ~/.config/nvim/plugins/which-key.vim
 source ~/.config/nvim/plugins/vimwiki.vim
 source ~/.config/nvim/plugins/goyo.vim
+source ~/.config/nvim/plugins/todoist.vim
 " Languages
 source ~/.config/nvim/plugins/go.vim
 source ~/.config/nvim/plugins/javascript.vim
@@ -252,8 +253,7 @@ source ~/.config/nvim/plugins/node.vim
 source ~/.config/nvim/plugins/graphql.vim
 source ~/.config/nvim/plugins/jsx.vim
 source ~/.config/nvim/plugins/typescript.vim
-source ~/.config/nvim/plugins/less.vim
-
+"source ~/.config/nvim/plugins/less.vim
 " TODO: move to emmet.vim
 source ~/.config/nvim/plugins/html.vim
 source ~/.config/nvim/plugins/clojure.vim
@@ -261,6 +261,8 @@ source ~/.config/nvim/plugins/rust.vim
 source ~/.config/nvim/plugins/markdown.vim
 source ~/.config/nvim/plugins/asm.vim
 source ~/.config/nvim/plugins/solidity.vim
+
+source ~/.config/nvim/plugins/writer-env.vim
 
 
 " Polyglot

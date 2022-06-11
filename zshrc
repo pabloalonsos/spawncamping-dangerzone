@@ -57,6 +57,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 path=(
   /usr/local/bin
+  /usr/local/lib/ruby/gems/3.1.0/bin
   $HOME/.local/bin
   $HOME/.bin
   $HOME/bin
@@ -65,6 +66,7 @@ path=(
   $HOME/.go/bin
   #$(brew --prefix golang/libexec)
   $HOME/.cargo/bin
+  /usr/local/opt/ruby/bin
   $path
   )
 
@@ -79,6 +81,8 @@ export NVIM_LISTEN_ADDRESS='/tmp/nvimsocket'
 export FZF_DEFAULT_COMMAND='ag -u -g ""'
 
 export GPG_TTY=$(tty)
+
+export TODOIST_API_KEY=1d128e66fcb919012a64705dda9ae142e51fa5e4
 
 unsetopt sharehistory
 # }}}
