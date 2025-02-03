@@ -5,12 +5,16 @@
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
     ~/.config/nvim: nvim
-    ~/.config/kitty: kitty
-    ~/.gvimrc: gvimrc
+    #~/.config/kitty: kitty
+    ~/.config/neofetch: neofetch
+    #~/.gvimrc: gvimrc
     ~/.zshrc: zshrc
     ~/.tmux.conf: tmux.conf 
+    ~/.zsh_plugins.txt: zsh_plugins.txt
+    ~/.dotfiles/scripts: scripts
 
 - shell:
+    - [touch $HOME/.hushlogin]
     - [git submodule update --init --recursive, Installing submodules]
     - [~/.tmux/plugins/tpm/scripts/install_plugins.sh > /dev/null 2>&1, Installing tmux plugins]
     - ["vim +PlugUpdate +PlugClean~ +qa", Installing and updating plugins]

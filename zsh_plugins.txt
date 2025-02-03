@@ -1,0 +1,26 @@
+
+robbyrussell/oh-my-zsh
+robbyrussell/oh-my-zsh path:plugins/macos
+robbyrussell/oh-my-zsh path:plugins/tmux
+robbyrussell/oh-my-zsh path:plugins/tmuxinator
+robbyrussell/oh-my-zsh path:plugins/autojump
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/git-extras
+robbyrussell/oh-my-zsh path:plugins/npm
+robbyrussell/oh-my-zsh path:plugins/node
+robbyrussell/oh-my-zsh path:plugins/ssh-agent
+robbyrussell/oh-my-zsh path:plugins/jump
+robbyrussell/oh-my-zsh path:plugins/jsontools
+#robbyrussell/oh-my-zsh path:plugins/httpie
+robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/docker-compose
+robbyrussell/oh-my-zsh path:plugins/cp
+
+# This needs to be the last bundle
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions
+
+
+# Load the themes
+dracula/zsh
+romkatv/powerlevel10k

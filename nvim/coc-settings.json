@@ -21,7 +21,5 @@
   "git.removedSign.text": "▁",
   "git.topRemovedSign.text": "▔",
   "git.changeRemovedSign.text": "▔",
-  "tailwindCSS.validate": true,
-  "tailwindCSS.emmetCompletions": true,
-  "prettier.requireConfig": true
+  "snippets.ultisnips.pythonPrompt": false
 }

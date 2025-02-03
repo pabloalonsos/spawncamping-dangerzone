@@ -26,5 +26,5 @@ Bat: https://github.com/sharkdp/bat
 Run all with:
 * `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 * `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
-* `brew install tmux nvim antibody ripgrep bat fzf && $(brew --prefix)/opt/fzf/install`
+* `brew install tmux nvim antibody ripgrep bat fzf reattach-to-user-namespace && $(brew --prefix)/opt/fzf/install`
 * `./install`

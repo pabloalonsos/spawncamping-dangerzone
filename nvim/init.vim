@@ -221,7 +221,8 @@ endif
 
 call plug#begin(data_dir . '/plugins')
 
-source ~/.config/nvim/plugins/dracula.vim
+"source ~/.config/nvim/plugins/dracula.vim
+Plug 'folke/tokyonight.nvim'
 source ~/.config/nvim/plugins/vim-airline.vim
 source ~/.config/nvim/plugins/fzf.vim
 " TODO
@@ -245,7 +246,10 @@ source ~/.config/nvim/plugins/visual-star-search.vim
 source ~/.config/nvim/plugins/which-key.vim
 source ~/.config/nvim/plugins/vimwiki.vim
 source ~/.config/nvim/plugins/goyo.vim
-source ~/.config/nvim/plugins/todoist.vim
+source ~/.config/nvim/plugins/vim-pencil.vim
+source ~/.config/nvim/plugins/nvim-tree.vim
+"source ~/.config/nvim/plugins/autosave.vim
+
 " Languages
 source ~/.config/nvim/plugins/go.vim
 source ~/.config/nvim/plugins/javascript.vim
@@ -253,11 +257,11 @@ source ~/.config/nvim/plugins/node.vim
 source ~/.config/nvim/plugins/graphql.vim
 source ~/.config/nvim/plugins/jsx.vim
 source ~/.config/nvim/plugins/typescript.vim
-"source ~/.config/nvim/plugins/less.vim
+source ~/.config/nvim/plugins/swift.vim
+source ~/.config/nvim/plugins/rust.vim
 " TODO: move to emmet.vim
 source ~/.config/nvim/plugins/html.vim
 source ~/.config/nvim/plugins/clojure.vim
-source ~/.config/nvim/plugins/rust.vim
 source ~/.config/nvim/plugins/markdown.vim
 source ~/.config/nvim/plugins/asm.vim
 source ~/.config/nvim/plugins/solidity.vim
@@ -284,3 +288,9 @@ source ~/.config/nvim/plugins/writer-env.vim
 call plug#end()
 doautocmd User PlugLoaded
 " }}}
+
+"lua require'nvim-tree'.setup()
+
+colorscheme tokyonight-night
+"let g:tokyonight_italic_functions = true
+let g:tokyonight_sidebars = ['quickfix', '__vista__', 'terminal']

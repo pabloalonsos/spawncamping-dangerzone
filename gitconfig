@@ -1,7 +1,7 @@
 [user]
     name = Pablo Alonso
     email = pabloalonso.subinas@gmail.com
-	signingkey = D44341D23E975B27
+	  signingkey = D44341D23E975B27
 [alias]
     a = add
     aa = add --all
@@ -89,4 +89,4 @@
 [pull]
     rebase = false
 [init]
-    defaultBranch = maini
+	defaultBranch = main

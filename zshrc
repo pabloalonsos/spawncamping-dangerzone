@@ -8,36 +8,9 @@ fi
 # ==========================================================================
 # Plugins {{{
 # ==========================================================================
-# Load the Antibody plugin manager for zsh.
-source <(antibody init)
-
-# Setup required env var for oh-my-zsh plugins
-export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
-
-antibody bundle robbyrussell/oh-my-zsh
-antibody bundle robbyrussell/oh-my-zsh path:plugins/macos
-antibody bundle robbyrussell/oh-my-zsh path:plugins/tmux
-antibody bundle robbyrussell/oh-my-zsh path:plugins/tmuxinator
-antibody bundle robbyrussell/oh-my-zsh path:plugins/autojump
-antibody bundle robbyrussell/oh-my-zsh path:plugins/git
-antibody bundle robbyrussell/oh-my-zsh path:plugins/git-extras
-antibody bundle robbyrussell/oh-my-zsh path:plugins/npm
-antibody bundle robbyrussell/oh-my-zsh path:plugins/node
-antibody bundle robbyrussell/oh-my-zsh path:plugins/ssh-agent
-antibody bundle robbyrussell/oh-my-zsh path:plugins/jump
-antibody bundle robbyrussell/oh-my-zsh path:plugins/jsontools
-antibody bundle robbyrussell/oh-my-zsh path:plugins/httpie
-antibody bundle robbyrussell/oh-my-zsh path:plugins/docker
-antibody bundle robbyrussell/oh-my-zsh path:plugins/docker-compose
-antibody bundle robbyrussell/oh-my-zsh path:plugins/cp
-
-# This needs to be the last bundle.
-antibody bundle zsh-users/zsh-syntax-highlighting
-antibody bundle zsh-users/zsh-autosuggestions
-
-# Load the theme
-antibody bundle dracula/zsh
-antibody bundle romkatv/powerlevel10k
+# Load the antidote plugin manager for zsh.
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 # }}}
 
 
@@ -82,7 +55,9 @@ export FZF_DEFAULT_COMMAND='ag -u -g ""'
 
 export GPG_TTY=$(tty)
 
-export TODOIST_API_KEY=1d128e66fcb919012a64705dda9ae142e51fa5e4
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 unsetopt sharehistory
 # }}}
@@ -96,6 +71,8 @@ alias mux="tmuxinator"
 alias copy="xclip -selection clipboard"
 alias paste="xclip -o -selection clipboard"
 alias cat="bat"
+alias python="python3"
+alias pip="pip3"
 # }}}
 
 
@@ -104,21 +81,6 @@ alias cat="bat"
 # ==========================================================================
 # Set up fuzzy searching
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 # }}}
 
 ZSH_TMUX_AUTOSTART='true'
@@ -126,10 +88,11 @@ ZSH_TMUX_AUTOSTART='true'
 # ==========================================================================
 # Interactive shell startup scripts {{{
 # ==========================================================================
-if [[ $- == *i* && $0 == '/bin/zsh' ]]; then
-  ~/.dotfiles/scripts/login.sh
-fi
+#if [[ $- == *i* && $0 == '/bin/zsh' ]]; then
+#fi
 # }}}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+~/.dotfiles/scripts/login.sh
